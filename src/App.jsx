@@ -44,7 +44,7 @@ function App() {
         Switch to {islogin ? "Sign Up" : "Login"}
       </button>
        </>}
-     
+     <Dashboard/>
     </div>
     </>
   );
