@@ -1,15 +1,26 @@
 import React from "react";
 import Transaction from "./Transaction";
 
-const Dashboard = () => {
+const Dashboard = ({Loggedin,setLoggedin}) => {
+  const Logout = () =>{
+  const data =  localStorage.getItem("loggedIn")
+  console.log(data);
+  setLoggedin('') 
+
+  }
+
   return (
     <div className="w-full h-screen bg-zinc-300 p-10">
       <div className="w-full flex justify-between">
         <h1 className="text-xl font-medium">
-          Hello <br />
-          UserName
+          Hello <br /> <h1 className="text-3xl font-semibold">
+         💸
+          </h1>
         </h1>{" "}
-        <button className="bg-red-600 px-4 h-10 rounded-md">LogOut</button>
+        <div>
+          <a href="Userinfo.jsx">Add info</a>
+        <button onClick={Logout} className="bg-red-600 px-4 h-10 rounded-md">LogOut</button>
+        </div>
       </div>
       <div className="flex justify-evenly">
         <div className="bg-lime-400 w-[20vw] h-52 rounded-md mt-10 shadow-xl"> 
@@ -33,7 +44,7 @@ const Dashboard = () => {
            <h1 className="font-medium text-xl ">Investment:-</h1> <h2 className="bg-white rounded-full px-8  py-1 text-lg font-semibold">2000</h2>
           </div></div>
       </div>
-      <Transaction/>
+      <Transaction />
     </div>
   );
 };
