@@ -1,7 +1,7 @@
 import React from 'react'
 import Mygoals from './Mygoals'
 
-const Transaction = () => {
+const Transaction = ({Userinfo}) => {
   return (
     <div className='flex gap-5'>
     <div className='w-1/2 mt-10 h-[40vh] bg-white shadow-lg rounded-lg p-5'>

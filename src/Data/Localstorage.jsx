@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Localstorage({hand;}) {
+function Localstorage({h}) {
 
  
 

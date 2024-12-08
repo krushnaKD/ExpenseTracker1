@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import SignUp from './SignUp';
 
 function Login({HandleLoging}) {
+  
     const [email, setemail] = useState('');
     const [password, setpassword] = useState('');
 
     const LogingDone = (e) =>{
       e.preventDefault()
-      console.log(email,password);
+      // console.log(email,password);
       HandleLoging(email,password)
       setemail('')
       setpassword('')

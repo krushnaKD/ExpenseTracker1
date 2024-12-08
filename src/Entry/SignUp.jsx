@@ -9,20 +9,28 @@ function SignUp(props) {
 
   const Signupfunction = (e) => {
     e.preventDefault();
-    setData([...data, { firstName, email, password }]);
-    console.log(data);
-    setfirstName("");
-    setemail("");
-    setpassword("");
+    if(firstName === ''|| email === ''|| password === '') {
+      alert("pls press again button ")
+    } else {
+      setData([...data,  {firstName, email, password }]);
+      console.log(data);
+      setfirstName("");
+      setemail("");
+      setpassword("");
 
-      localStorage.setItem("User", JSON.stringify(data));
+
+    }
+  
+
+    localStorage.setItem("User", JSON.stringify(data));
+
   
   };
 
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center text-white">
       <form
-        onSubmit={(e) => Signupfunction(e)}
+        onSubmit={(e) =>Signupfunction(e)}
         className="w-1/4 h-[30vh] p-10 flex flex-col border-2 gap-2 border-red-500 rounded-md items-center  "
       >
         <input
