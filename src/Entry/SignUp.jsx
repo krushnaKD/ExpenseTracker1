@@ -7,30 +7,24 @@ function SignUp(props) {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
-  const Signupfunction = (e) => {
-    e.preventDefault();
-    if(firstName === ''|| email === ''|| password === '') {
-      alert("pls press again button ")
+  const Signupfunction = () => {
+    // e.preventDefault();
+    if (firstName === "" || email === "" || password === "") {
+      alert("pls press again button ");
     } else {
-      setData([...data,  {firstName, email, password }]);
+      setData([...data, { firstName, email, password }]);
+      localStorage.setItem("User", JSON.stringify(data));
       console.log(data);
       setfirstName("");
       setemail("");
       setpassword("");
-
-
     }
-  
-
-    localStorage.setItem("User", JSON.stringify(data));
-
-  
   };
 
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center text-white">
-      <form
-        onSubmit={(e) =>Signupfunction(e)}
+      <div
+        // onSubmit={(e) => Signupfunction()}
         className="w-1/4 h-[30vh] p-10 flex flex-col border-2 gap-2 border-red-500 rounded-md items-center  "
       >
         <input
@@ -61,11 +55,12 @@ function SignUp(props) {
           placeholder="Enter Password"
         />
 
-          <button className="w-1/2  px-2 py-1 bg-green-500 rounded-lg">
-            SignUp
-          </button>
- 
-      </form>
+        <button
+          onClick={()=>{ Signupfunction()}}
+        className="w-1/2  px-2 py-1 bg-green-500 rounded-lg">
+          SignUp
+        </button>
+      </div>
     </div>
   );
 }

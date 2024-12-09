@@ -5,6 +5,9 @@ import Dashboard from "./Components/Dashboard";
 import Userinfo from "./Userinformation/Userinfo";
 import Usercontext, { Mycontext } from "./UserContext/Usercontext";
 import { infocontext } from "./UserContext/InfoContext";
+import MainDashboard from "./Components/MainDashboard";
+import { Route, Routes } from "react-router";
+import Goals from "./Data/Goals";
 
 function App() {
   // localStorage.clear()
@@ -51,10 +54,14 @@ useEffect(()=>{
 
   return (
     <>
+    
       <div className="bg-zinc-600 w-full h-screen relative">
-
+   
         {users === "user" ? (
-          <Dashboard Userinfo={{Loggedin,setLoggedin}} />
+     <Routes>
+     <Route path="/MainDashboard" element={<MainDashboard  />}/>
+     <Route path="/Dashboard" element={<Dashboard Userinfo={{Loggedin,setLoggedin}}/>}/>
+   </Routes>
         ) : (
           <>
             {" "}
@@ -67,10 +74,9 @@ useEffect(()=>{
             </button>
           </>
         )}
-        {/* <Dashboard /> */}
-        <Userinfo />
+      {/* <Goals/> */}
       </div>
-      {/* <Usercontext /> */}
+    
     </>
   );
 }

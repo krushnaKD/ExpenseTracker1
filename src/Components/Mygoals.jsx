@@ -13,27 +13,10 @@ const Mygoals = () => {
         <div className="w-full p-3 flex mt-10 h-12 bg-yellow-300 rounded-md items-center justify-between">
           <h1>New Car</h1>
           <div className="flex">
-            <h2>$1000</h2>/<h2>$2000</h2>
+            <h2>₹1000</h2>/<h2>₹2000</h2>
           </div>
         </div>
-        <div className="w-full p-3 flex  h-12 bg-yellow-300 rounded-md items-center justify-between">
-          <h1>New Car</h1>
-          <div className="flex">
-            <h2>$1000</h2>/<h2>$2000</h2>
-          </div>
-        </div>
-        <div className="w-full p-3 flex  h-12 bg-yellow-300 rounded-md items-center justify-between">
-          <h1>New Car</h1>
-          <div className="flex">
-            <h2>$1000</h2>/<h2>$2000</h2>
-          </div>
-        </div>
-        <div className="w-full p-3 flex  h-12 bg-yellow-300 rounded-md items-center justify-between">
-          <h1>New Car</h1>
-          <div className="flex">
-            <h2>$1000</h2>/<h2>$2000</h2>
-          </div>
-        </div>
+       
       </div>
     </div>
   );

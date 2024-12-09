@@ -19,25 +19,25 @@ const Transaction = ({Userinfo}) => {
         <h1 className='text-xl text-zinc-700 w-'>Vadapav</h1>
         <h2 >food</h2>
         <h2>24 Nov 2024</h2>
-        <h2>$20</h2>
+        <h2>₹20</h2>
       </div>
       <div className='w-full flex justify-between mt-2'>
         <h1 className='text-xl text-zinc-700 w-'>Shoes</h1>
         <h2 >Lifestyle</h2>
         <h2>24 feb 2024</h2>
-        <h2>$200</h2>
+        <h2>₹200</h2>
       </div>
       <div className='w-full flex justify-between mt-2'>
         <h1 className='text-xl text-zinc-700 w-'>Chinese</h1>
         <h2 >food</h2>
         <h2>24 Nov 2024</h2>
-        <h2>$20</h2>
+        <h2>₹20</h2>
       </div>
       <div className='w-full flex justify-between mt-2'>
         <h1 className='text-xl text-zinc-700 w-'>Vadapav</h1>
         <h2 >food</h2>
         <h2>24 Nov 2024</h2>
-        <h2>$20</h2>
+        <h2>₹20</h2>
       </div> 
     </div>
     <Mygoals/>
